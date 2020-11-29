@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow-x: hidden;
+	background-image: url('../images/bg-mobile-light.jpg');
+	background-repeat: no-repeat;
+	font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+
+  --primary: hsl(220, 98%, 61%);
+  --bg: white;
+  --text: hsl(0, 0%, 98%);
+  --blue1: hsl(236, 33%, 92%);
+  --blue2: hsl(233, 11%, 84%);
+  --blue3: hsl(236, 9%, 61%);
+  --blue4: hsl(235, 19%, 35%);
+
+  background-color: var(--bg);
+}
+
+body.dark{
+  --bg: hsl(235, 24%, 19%);
+  --blue1: hsl(233, 14%, 35%);
+  --blue2: hsl(235, 21%, 11%);
+  --Blue3: hsl(234, 39%, 85%);
+  --blue4: hsl(237, 14%, 26%);
+/* 
+Light Grayish Blue (hover): hsl(236, 33%, 92%)
+Dark Grayish Blue: hsl(234, 11%, 52%)
+  /* --text: white; */
+  /* --bg: white; */
+}
+
+.todo-app {
+	width: 90%;
+	max-width: 600px;
+	margin-top: 30px;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+.todo-app__title {
+	color: var(--text);
+	font-weight: 700;
+	font-size: 2rem;
+  letter-spacing: 10px;
+}
+.todo-app__mode{
+  cursor: pointer;
+  margin-left: 30%;
+}
+
+/* Form */
+.todo-form {
+	margin-top: 30px;
+	width: 100%;
+}
+.todo-form__input {
+	width: 100%;
+	padding: 15px 4px;
+	padding-left: 30px;
+	border-radius: 5px;
+	border: none;
+	outline-style: none;
+	position: relative;
+  font-family: 'Josefin Sans';
+  font-size: 1.3rem;
+  color: var(--blue3);
+  background-color: var(--bg);
+}
+
+.todo-form__input::placeholder {
+	font-family: 'Josefin Sans';
+}
+
+/* LIST */
+.todo-list {
+	margin-top: 15px;
+	background-color: var(--bg);
+	border-radius: 5px;
+	list-style: none;
+	box-shadow: 0px 5px 40px var(--blue2);
+}
+.todo-list__item {
+	padding: 15px 20px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--blue2);
+	cursor: pointer;
+}
+.todo-list__item__text {
+  color: var(--blue3);
+	font-weight: 400;
+	flex: 1;
+	cursor: pointer;
+}
+.todo-list__item__text.completed {
+	opacity: 0.5;
+}
+.todo-list__item__status {
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 1px solid var(--blue2);
+}
+.todo-list__item__status.completed {
+	background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.todo-list__item__cross {
+	cursor: pointer;
+}
+/* FOOTER */
+.todo-footer {
+	display: flex;
+	justify-content: space-between;
+  padding: 10px 20px;
+  color: var(--blue3)
+}
+.todo-footer__delete {
+	cursor: pointer;
+}
+/* FILTER */
+.todo-filter {
+	margin-top: 30px;
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 5px 50px var(--blue2);
+  color: var(--blue3);
+  background-color: var(--bg);
+}
+.todo-filter__options {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	font-weight: 700;
+}
+.todo-filter__option {
+	cursor: pointer;
+}
+
+/* Desktop */
+
+@media only screen and (min-width: 380px) {
+	body {
+		background-image: url('../images/bg-desktop-light.jpg');
+	}
+	.todo-app {
+		margin-top: 60px;
+  }
+}
